@@ -226,26 +226,6 @@ rightBtn.addEventListener('mouseleave', stopMovement);
 	}
 })();
 
-function openModal(element) {
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
-    modal.style.display = "flex";
-    modalImg.src = element.src;
-}
-
-function closeModal(event) {
-    var modal = document.getElementById("myModal");
-    if (event.target === modal || event.target.className === 'close') {
-        modal.style.display = "none";
-    }
-}
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
-    }
-});
 
 function enviarCorreo() {
     var nombre = document.getElementById('gname').value;
