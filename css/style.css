@@ -23,7 +23,8 @@
     border-radius:50px;
     text-align:center;
     font-size:30px;
-    border-radius: 50%;
+    border: 2px solid black;
+  border-radius: 50%;
   }
 
   
@@ -194,6 +195,7 @@ a.btn.btn-primary.py-3.px-5:focus {
     vertical-align: middle;
     margin-left: 8px;
 }
+
 
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link  {
