@@ -23,8 +23,7 @@
     border-radius:50px;
     text-align:center;
     font-size:30px;
-    border: 2px solid black;
-  border-radius: 50%;
+    border-radius: 50%;
   }
 
   
@@ -143,7 +142,7 @@ a.btn.btn-primary.py-3.px-5:focus {
       }
   
       .custom-button:hover i {
-        transform: translateX(2.7em) scale(1.1);
+        transform: translateX(2.7rem) scale(1.1);
       }
   
       .custom-button:hover span {
@@ -177,7 +176,8 @@ a.btn.btn-primary.py-3.px-5:focus {
     text-transform: uppercase;
     outline: none;
 }
-.navbar-brand img{
+
+.navbar-brand img {
     width: 6rem;
 }
 
@@ -491,6 +491,7 @@ a.btn.btn-primary.py-3.px-5:focus {
     max-width: 1200px;
     width: 100%;
     margin: auto;
+    padding: 0 2.5rem;
 }
 .gallery-item {
     position: relative;
