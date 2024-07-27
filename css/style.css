@@ -379,6 +379,7 @@ a.btn.btn-primary.py-3.px-5:focus {
   
 
 
+
 /* Ajusta el carrusel para que tenga un índice z más bajo */
 .carousel {
   position: relative;
@@ -389,8 +390,15 @@ a.btn.btn-primary.py-3.px-5:focus {
 .ftco-services {
   position: relative;
   z-index: 10; /* Asegúrate de que sea más alto que el carrusel */
-  margin-top: -100px; /* Ajusta este valor según tus necesidades */
+  margin-top: -135px; /* Ajusta este valor según tus necesidades */
   display: flex;
+  justify-content: center;
+}
+
+.ftco-services .card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -447,7 +455,7 @@ a.btn.btn-primary.py-3.px-5:focus {
 .button {
   padding: 12px 25px;
   background: #fff;
-  border: 1px solid #121212;
+  border: 1px solid #000000;
   color: #121212;
   font-weight: 700;
   cursor: pointer;
@@ -480,11 +488,9 @@ a.btn.btn-primary.py-3.px-5:focus {
   border-radius: 0;
 }
 
-
-
 .wallet {
   --bg-color: #207222;
-  --bg-color-light: #272c28;
+  --bg-color-light: #000000;
   --text-color-hover: #fff;
   --box-shadow-color: rgba(32, 114, 34, 0.48);
 }
@@ -492,7 +498,7 @@ a.btn.btn-primary.py-3.px-5:focus {
 .card {
   width: 395px;
   height: 222px;
-  background: #efefef;
+  background: #fff;
   border-top-right-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -532,22 +538,15 @@ a.btn.btn-primary.py-3.px-5:focus {
   fill: var(--bg-color);
 }
 
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 .card p {
   font-size: 17px;
-  color: #000000;
-  margin: 11px 20px; /* Ajusta el margen izquierdo y derecho para el espacio en los costados */
+  color: #4c5656;
+  margin-top: 10px;
   z-index: 1000;
   transition: color 0.3s ease-out;
-  padding: 0 10px; /* Añade padding a los lados para asegurar que el texto no toque los bordes */
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 }
 
 .circle {
@@ -572,8 +571,8 @@ a.btn.btn-primary.py-3.px-5:focus {
   position: absolute;
   background: var(--bg-color);
   border-radius: 50%;
-  top: 7px;
-  left: 7px;
+  top: 5px;
+  left: 5px;
   transition: opacity 0.3s ease-out;
 }
 
@@ -583,24 +582,60 @@ a.btn.btn-primary.py-3.px-5:focus {
 }
 
 .overlay {
-  width: 30%; /* Ajusta el ancho de manera proporcional al tamaño del contenedor */
+  width: 31%; /* Ajusta el ancho de manera proporcional al tamaño del contenedor */
   height: 53%; /* Ajusta la altura de manera proporcional al tamaño del contenedor */
   position: absolute;
   border-radius: 50%;
   background: var(--bg-color);
-  top: 10%; /* Ajusta la posición desde el borde superior */
+  top: 9%; /* Ajusta la posición desde el borde superior */
   left: 35%; /* Ajusta la posición desde el borde izquierdo */
   z-index: 0;
   transition: transform 0.3s ease-out;
 }
 
-@media (max-width: 767.98px) {
+#environmental-services {
+  background-color: #207222; /* Color de fondo */
+  padding: 20px; /* Ajusta el padding según sea necesario */
+}
+
+#environmental-services .display-6 {
+  font-size: calc(1.875rem - 15px); /* Ajusta el tamaño de la fuente */
+}
+
+.card1 {
+  width: 395px;
+  height: 222px;
+  background: #fff;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+/* Ajuste de margen superior en dispositivos de escritorio */
+.ftco-services {
+  margin-top: -240px; /* Ajusta el margen superior en dispositivos de escritorio */
+}
+
+/* Estilos para cuando el diseño es responsive */
+@media (max-width: 768px) {
+  /* Oculta el div con la clase especificada */
+  .col-md-2.col-lg-4.d-flex.services.align-self-stretch.p-4.ftco-animate {
+    display: none !important;
+  }
+
+  /* Ajustes adicionales para responsive */
   .ftco-services {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-top: -157px !important; /* Ajusta el margen superior para dispositivos móviles */
   }
 }
-  
+
 /*** Facts ***/
 .facts-overlay {
     position: absolute;
