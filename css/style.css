@@ -496,8 +496,10 @@ a.btn.btn-primary.py-3.px-5:focus {
 }
 
 .card {
-  width: 366px;
-  height: 222px;
+  padding-top: 4%;
+  width: 80vw; /* Ajusta el ancho al 80% del ancho de la ventana */
+  max-width: 366px; /* Asegura que no sea más ancho de 366px */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
   background: #fff;
   border-top-right-radius: 10px;
   overflow: hidden;
@@ -509,6 +511,11 @@ a.btn.btn-primary.py-3.px-5:focus {
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
+}
+
+.card img {
+  width: 76%;
+  height: auto; /* Ajusta la altura automáticamente */
 }
 
 .card:hover {
@@ -603,8 +610,9 @@ a.btn.btn-primary.py-3.px-5:focus {
 }
 
 .card1 {
-  width: 395px;
-  height: 222px;
+  width: 80vw; /* Ajusta el ancho al 80% del ancho de la ventana */
+  max-width: 366px; /* Asegura que no sea más ancho de 366px */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
   background: #fff;
   border-top-right-radius: 10px;
   overflow: hidden;
@@ -634,7 +642,12 @@ a.btn.btn-primary.py-3.px-5:focus {
   .ftco-services {
     margin-top: -95px !important; /* Ajusta el margen superior para dispositivos móviles */
   }
+
+  .card, .card1 {
+    width: 90vw; /* Ajusta el ancho al 90% del ancho de la ventana en dispositivos móviles */
+  }
 }
+
 
 /*** Facts ***/
 .facts-overlay {
