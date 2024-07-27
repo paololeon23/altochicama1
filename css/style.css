@@ -377,6 +377,230 @@ a.btn.btn-primary.py-3.px-5:focus {
     }
   }
   
+
+
+/* Ajusta el carrusel para que tenga un índice z más bajo */
+.carousel {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajusta la sección de servicios */
+.ftco-services {
+  position: relative;
+  z-index: 10; /* Asegúrate de que sea más alto que el carrusel */
+  margin-top: -100px; /* Ajusta este valor según tus necesidades */
+  display: flex;
+  justify-content: center;
+}
+
+/* Servicios individuales con degradados */
+.service-1 .icon {
+  background: linear-gradient(45deg, #207222, #6fae6e); /* Degradado verde */
+  color: #ffffff; /* Color del icono */
+}
+
+.service-2 .icon {
+  background: linear-gradient(45deg, #6fae6e, #207222); /* Degradado verde más oscuro */
+  color: #ffffff; /* Color del icono */
+}
+
+.service-1 {
+  background: linear-gradient(135deg, #207222, #6fae6e); /* Fondo con degradado */
+  margin: 15px; /* Espaciado entre las tarjetas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-2 {
+  background: linear-gradient(135deg, #6fae6e, #207222); /* Fondo con degradado diferente */
+  margin: 15px; /* Espaciado entre las tarjetas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-1 .media-body,
+.service-2 .media-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-1 .heading,
+.service-2 .heading {
+  color: #ffffff; /* Color del texto del encabezado */
+  text-align: center; /* Centrar texto */
+}
+
+.service-1 p,
+.service-2 p {
+  color: #ffffff; /* Color del texto del párrafo */
+  text-align: center; /* Centrar texto */
+}
+
+/* Estilo del botón */
+.button {
+  padding: 12px 25px;
+  background: #fff;
+  border: 1px solid #121212;
+  color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #207222;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+
+
+.wallet {
+  --bg-color: #207222;
+  --bg-color-light: #272c28;
+  --text-color-hover: #fff;
+  --box-shadow-color: rgba(32, 114, 34, 0.48);
+}
+
+.card {
+  width: 395px;
+  height: 222px;
+  background: #efefef;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.card:hover .overlay {
+  transform: scale(4) translateZ(0);
+}
+
+.card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+
+.card:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+.card:hover p {
+  color: var(--text-color-hover);
+}
+
+.card:hover .circle svg g {
+  fill: var(--bg-color);
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card p {
+  font-size: 17px;
+  color: #000000;
+  margin: 11px 20px; /* Ajusta el margen izquierdo y derecho para el espacio en los costados */
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+  padding: 0 10px; /* Añade padding a los lados para asegurar que el texto no toque los bordes */
+}
+
+.circle {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+  transition: opacity 0.3s ease-out;
+}
+
+.circle svg {
+  z-index: 10000;
+  transform: translateZ(0);
+}
+
+.overlay {
+  width: 30%; /* Ajusta el ancho de manera proporcional al tamaño del contenedor */
+  height: 53%; /* Ajusta la altura de manera proporcional al tamaño del contenedor */
+  position: absolute;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 10%; /* Ajusta la posición desde el borde superior */
+  left: 35%; /* Ajusta la posición desde el borde izquierdo */
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
+
+@media (max-width: 767.98px) {
+  .ftco-services {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+  
 /*** Facts ***/
 .facts-overlay {
     position: absolute;
