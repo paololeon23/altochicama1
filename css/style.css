@@ -632,7 +632,7 @@ a.btn.btn-primary.py-3.px-5:focus {
 
   /* Ajustes adicionales para responsive */
   .ftco-services {
-    margin-top: -115px !important; /* Ajusta el margen superior para dispositivos móviles */
+    margin-top: -95px !important; /* Ajusta el margen superior para dispositivos móviles */
   }
 }
 
