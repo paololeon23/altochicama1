@@ -235,7 +235,7 @@ function enviarCorreo() {
     var message = document.getElementById('message').value;
     var cuerpo = "Nombre: " + nombre + "\n" + "Apellido: " + apellido + "\n" + "Teléfono: " + telefono + '\n' + "Descríbenos tu mensaje:\n" + message;
 
-    var url = "https://mail.google.com/mail/?view=cm&fs=1&to=pleona1@upao.gmail.com&su=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpo);
+    var url = "https://mail.google.com/mail/?view=cm&fs=1&to=comercial@serviciosambientalesaltochicama.com&su=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpo);
     
     window.open(url,'_blank')
     
